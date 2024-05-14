@@ -33,16 +33,13 @@ void Triangulo::setV3(Punto _v3){
 }
 
 double Triangulo::perimetro(){
-    double peri = abs(sqrt(pow((v2.getX() - v1.getX()), 2) + pow((v2.getY() - v1.getY()), 2))) +
-              abs(sqrt(pow((v3.getX() - v2.getX()), 2) + pow((v3.getY() - v2.getY()), 2))) +
-              abs(sqrt(pow((v3.getX() - v1.getX()), 2) + pow((v3.getY() - v1.getY()), 2)));
+    double peri = v1.calculaDistancia(v2) + v2.calculaDistancia(v3) + v3.calculaDistancia(v1);
     return peri;
 }
+
 double Triangulo::area(){
-    double ar = 0.5 * (((v1.getX() * v2.getY()) + (v2.getX() * v3.getY()) +
-    (v3.getX() * v1.getY())) - ((v1.getX() * v3.getY()) + (v3.getX() * v2.getY()) +
-    (v2.getX() * v1.getY())));
-    return abs(ar);
+    double ar = 0.5 * abs((v1.getX() - v3.getX()) * (v2.getY() - v1.getY()) - (v1.getX() - v2.getX()) * (v3.getY() - v1.getY()));
+    return ar;
 }
 string Triangulo::str(){
     return "0";

@@ -25,7 +25,7 @@ int main( ){
     cout << "a_tri2 = " << tri2.area() << endl;
     cout << "p_tri3 = " << tri3.perimetro() << endl;
     cout << "a_tri3 = " << tri3.area() << endl;
-    cout << "Distancia = " << p1.calculaDistancia()  << endl;
+    cout << "Distancia = " << p1.calculaDistancia(p2)  << endl;
    
     return 0;
 }

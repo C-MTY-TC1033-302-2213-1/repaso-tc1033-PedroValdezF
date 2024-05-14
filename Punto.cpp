@@ -22,9 +22,8 @@ double Punto::getX(){
 double Punto::getY(){
     return y;
 }
-
-double Punto::calculaDistancia(){
-    return sqrt(x*x + y*y);
+double Punto::calculaDistancia(const Punto& otro) const {
+    return sqrt(pow(x - otro.x, 2) + pow(y - otro.y, 2));
 }
 string Punto::str(){
     return "0";

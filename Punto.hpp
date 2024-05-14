@@ -19,7 +19,7 @@ void setY(double _y);
 double getX();
 double getY();
 
-double calculaDistancia();
+double calculaDistancia(const Punto& otro) const;
 string str();
 };
 
