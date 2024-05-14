@@ -42,7 +42,7 @@ double Triangulo::area(){
     double ar = 0.5 * (((v1.getX() * v2.getY()) + (v2.getX() * v3.getY()) +
     (v3.getX() * v1.getY())) - ((v1.getX() * v3.getY()) + (v3.getX() * v2.getY()) +
     (v2.getX() * v1.getY())));
-    return ar;
+    return abs(ar);
 }
 string Triangulo::str(){
     return "0";
